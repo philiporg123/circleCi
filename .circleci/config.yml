@@ -1,12 +1,11 @@
 version: 2.1
 
 orbs:
-  vulnachecka: philipbox/vulnachecka@1.0.1
+  vulnachecka: philipbox/vulnachecka@1.0.2
 
 workflows:
   test:
     jobs:
     - vulnachecka/scan:
-        api_key: aad2132
-        config_file_path:  "https://s3.amazonaws.com/file-system-agent/SNAPSHOT/whitesource-fs-agent.config"
-        commands_file_path: "https://s3.amazonaws.com/file-system-agent/SNAPSHOT/install_commands.sh"
+        config_file_path:  "wss-unified-agent.config"
+        commands_file_path: "install_commands.sh"
